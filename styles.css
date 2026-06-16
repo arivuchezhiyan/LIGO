@@ -75,6 +75,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 body {
@@ -84,6 +85,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   padding-top: 80px; /* Offset for sticky header */
+  overflow-x: hidden;
 }
 
 img {
@@ -409,7 +411,7 @@ nav.nav-desktop a.active::after {
 /* --- Hero Section --- */
 #hero-section {
   position: relative;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('assets/images/background.webp');
+  background-image: url('assets/images/background.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -495,6 +497,9 @@ nav.nav-desktop a.active::after {
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
   width: 100%;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-title {
@@ -1020,7 +1025,7 @@ nav.nav-desktop a.active::after {
 /* --- Gastroenterology Services --- */
 .gastro-services-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
 }
 
@@ -1288,6 +1293,35 @@ footer.site-footer {
   
   .form-row {
     gap: 20px;
+  }
+  
+  .gastro-services-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .gastro-service-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .gastro-service-text h3 {
+    font-size: 15px;
+  }
+  
+  .gastro-service-text p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .text-headline-xl {
+    font-size: 30px; /* Prevent overflow of long words like Gastroenterology */
+  }
+
+  .text-headline-lg {
+    font-size: 26px;
   }
 }
 
