@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Gastroenterology & Digestive Care | LIGO Hospital Chennai</title>
+  <meta name="description" content="Advanced gastroenterology care in Chennai at LIGO Hospital. Expert treatment for digestive disorders, liver issues, endoscopy and gut health."/>
+  
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- 1. HEADER (TopNavBar) -->
+  <header class="sticky-header" id="main-header">
+    <div class="header-container">
+      <a href="#" class="logo" aria-label="LIGO Hospital Home">
+        <img src="assets/logo/ligo_logo.png" alt="LIGO Superspeciality Hospital Logo"/>
+      </a>
+      
+      <!-- Booking Button -->
+      <a href="#appointment-form" class="btn btn-primary">Book Appointment</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section class="section-padding" id="hero-section">
+      <div class="container grid-2">
+        <div class="hero-content">
+          <div class="badge-verified">
+            <span class="material-symbols-outlined filled">verified</span>
+            Digestive Health Excellence
+          </div>
+          
+          <h1 class="text-headline-xl hero-title">
+            Advanced Gastroenterology Care
+          </h1>
+          
+          <p class="text-body-lg hero-subtitle">
+            Expert medical care for all digestive disorders. We specialize in managing acid reflux, IBS, liver diseases, and pancreatic disorders using advanced diagnostic tools.
+          </p>
+          
+          <ul class="hero-checklist">
+            <li>
+              <span class="material-symbols-outlined filled">check_circle</span>
+              <span>Leading Digestive Specialists</span>
+            </li>
+            <li>
+              <span class="material-symbols-outlined filled">check_circle</span>
+              <span>Advanced Diagnostic Endoscopy</span>
+            </li>
+            <li>
+              <span class="material-symbols-outlined filled">check_circle</span>
+              <span>Personalized Treatment Plans</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Floating Form Card -->
+        <div class="form-card" id="appointment-form">
+          <h2 class="form-title">Book Your Consultation</h2>
+          <form class="lead-form" id="booking-form" novalidate>
+            <div class="form-group">
+              <label for="full-name">Full Name</label>
+              <input id="full-name" name="fullName" placeholder="John Doe" type="text" required aria-required="true"/>
+              <span class="form-error" id="name-error">Please enter a valid name (letters and spaces only).</span>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input id="phone-number" name="phone" placeholder="10-digit phone number" type="tel" maxlength="10" required aria-required="true"/>
+                <span class="form-error" id="phone-error">Please enter a valid 10-digit phone number.</span>
+              </div>
+              <div class="form-group">
+                <label for="preferred-date">Preferred Date</label>
+                <input id="preferred-date" name="preferredDate" type="date" required aria-required="true"/>
+                <span class="form-error" id="date-error">Please choose a date (today or in the future).</span>
+              </div>
+            </div>
+            
+            <button class="btn btn-primary btn-full" type="submit">
+              Request Appointment
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="gradient-edge-bottom color"></div>
+    </section>
+
+    <!-- 3. PROCEDURES IMAGES SECTION -->
+    <section class="section-padding bg-alt" id="procedures">
+      <div class="container">
+        <h2 class="section-title">Advanced Gastro Procedures</h2>
+        
+        <div class="procedures-grid">
+          <!-- Procedure 1 -->
+          <div class="procedure-card">
+            <div class="procedure-image-wrapper">
+              <img class="procedure-image" src="https://ligosuperspecialityhospital.com/assets/images/services/gastroenterology-img-1.png" alt="Therapeutic Endoscopy Procedure"/>
+            </div>
+            <div class="procedure-info">
+              <h3>Therapeutic Endoscopy</h3>
+              <p>Advanced minimally invasive treatments.</p>
+            </div>
+          </div>
+          
+          <!-- Procedure 2 -->
+          <div class="procedure-card">
+            <div class="procedure-image-wrapper">
+              <img class="procedure-image" src="https://ligosuperspecialityhospital.com/assets/images/services/Laparoscopic-Surgery1.png" alt="Laparoscopic Surgery Procedure"/>
+            </div>
+            <div class="procedure-info">
+              <h3>Laparoscopic Surgery</h3>
+              <p>Minimally invasive surgical solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHY CHOOSE US & STATS -->
+    <section class="section-padding" id="why-choose-us">
+      <div class="container grid-2">
+        <div class="why-choose-image-wrapper">
+          <img class="why-choose-image" src="https://ligosuperspecialityhospital.com/assets/images/services/gastrology.png" alt="LIGO Gastroenterology Center Room"/>
+        </div>
+        
+        <div class="why-choose-content">
+          <div class="badge-verified" style="margin-bottom: 8px;">
+            Why Choose LIGO
+          </div>
+          <h2 class="text-headline-lg why-choose-title">Excellence in Digestive Care</h2>
+          <p class="text-body-lg text-muted">
+            LIGO Hospital is at the forefront of gastroenterology, offering world-class treatment with a human touch. Our dedicated team works round the clock to ensure the best outcomes for our patients.
+          </p>
+          
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">30+</div>
+              <div class="stat-label">Specialist Doctors</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">8K+</div>
+              <div class="stat-label">Happy Patients</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Emergency Care</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">12+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SERVICES SECTIONS -->
+    <section class="section-padding bg-alt" id="services">
+      <div class="container">
+        <h2 class="section-title">Comprehensive Gastroenterology Services</h2>
+        
+        <div class="cards-grid" style="grid-template-columns: 1fr;">
+          <!-- Custom layout for Gastro Services with Left Icon alignment on Desktop -->
+          <div class="gastro-services-container">
+            <!-- Service 1 -->
+            <div class="gastro-service-card">
+              <div class="gastro-service-icon">
+                <span class="material-symbols-outlined">health_and_safety</span>
+              </div>
+              <div class="gastro-service-text">
+                <h3>Diagnostic Endoscopy</h3>
+                <p>A visual examination of the upper digestive tract to diagnose conditions affecting the oesophagus, stomach, and small intestine.</p>
+              </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="gastro-service-card">
+              <div class="gastro-service-icon">
+                <span class="material-symbols-outlined">healing</span>
+              </div>
+              <div class="gastro-service-text">
+                <h3>Liver Disease Management</h3>
+                <p>Expert care for liver diseases such as hepatitis, fatty liver, cirrhosis, and other hepatobiliary conditions.</p>
+              </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="gastro-service-card">
+              <div class="gastro-service-icon">
+                <span class="material-symbols-outlined">medical_services</span>
+              </div>
+              <div class="gastro-service-text">
+                <h3>Colonoscopy</h3>
+                <p>An essential screening for colon cancer and diagnosis of lower gastrointestinal causes of pain or bleeding.</p>
+              </div>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="gastro-service-card">
+              <div class="gastro-service-icon">
+                <span class="material-symbols-outlined">emergency</span>
+              </div>
+              <div class="gastro-service-text">
+                <h3>Gastrointestinal Emergency Care</h3>
+                <p>24/7 care for acute digestive issues such as gastrointestinal bleeding, severe abdominal pain, and obstructions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PROCESS SECTION (Journey) -->
+    <section class="section-padding" id="process">
+      <div class="container">
+        <h2 class="section-title">Your Journey to Recovery</h2>
+        
+        <div class="timeline-wrapper">
+          <!-- Step 1 -->
+          <div class="timeline-step">
+            <div class="timeline-number">1</div>
+            <div class="timeline-details">
+              <h4>Consultation</h4>
+              <p>Meet our gastroenterologists for symptom evaluation and physical assessment.</p>
+            </div>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="timeline-step">
+            <div class="timeline-number">2</div>
+            <div class="timeline-details">
+              <h4>Diagnostic Diagnostics</h4>
+              <p>State-of-the-art endoscopy, colonoscopy, or ultrasound imaging check.</p>
+            </div>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="timeline-step">
+            <div class="timeline-number">3</div>
+            <div class="timeline-details">
+              <h4>Care Plan</h4>
+              <p>Individual medical protocols, dietary adjustments, or minimally invasive procedures.</p>
+            </div>
+          </div>
+          
+          <!-- Step 4 -->
+          <div class="timeline-step">
+            <div class="timeline-number">4</div>
+            <div class="timeline-details">
+              <h4>Follow-up</h4>
+              <p>Long-term gut health optimization, regular clinical reviews, and support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand -->
+      <div class="footer-col">
+        <a href="#" class="logo" style="margin-bottom: 8px;">
+          <img src="assets/logo/ligo_logo.png" alt="LIGO Hospital Logo"/>
+        </a>
+        <p class="footer-desc">
+          LIGO Speciality Hospital provides expert medical care with a focus on quality and patient safety. Our experienced specialists use advanced technology to deliver reliable treatment.
+        </p>
+      </div>
+      
+      <!-- Col 2: Contact Info -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact Us</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <span class="material-symbols-outlined">location_on</span>
+            <span>
+              378, E Mogappair Rd, Paneer Nagar,<br/>
+              Mogappair, Chennai, Tamil Nadu 600037
+            </span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">phone</span>
+            <span>+91 73057 78934,<br/>+91 73057 01694</span>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">mail</span>
+            <span>info@ligosuperspecialityhospital.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      &copy; 2026 LIGO Superspeciality Hospital. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Success Message Overlay -->
+  <div class="success-overlay" id="success-overlay">
+    <div class="success-card">
+      <div class="success-icon">
+        <span class="material-symbols-outlined">check_circle</span>
+      </div>
+      <h3>Consultation Requested!</h3>
+      <p>Thank you for submitting. Our gastroenterology clinical coordinator will review your symptoms and call you within 24 hours to schedule your visit.</p>
+      <button class="btn btn-primary btn-full" id="close-success-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
