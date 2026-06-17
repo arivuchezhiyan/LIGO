@@ -10,34 +10,43 @@
 /* --- Design Tokens --- */
 :root {
   /* Colors */
-  --primary: #00A0B1;          /* Primary Teal */
+  --primary: #00A0B1;
+  /* Primary Teal */
   --primary-color-rgb: 0, 160, 177;
   --primary-hover: #008D9C;
-  --secondary: #00495A;        /* Secondary Dark Teal */
+  --secondary: #00495A;
+  /* Secondary Dark Teal */
   --secondary-hover: #003744;
-  --footer-bg: #203C50;        /* Grounding dark slate */
-  
+  --footer-bg: #203C50;
+  /* Grounding dark slate */
+
   --background: #FFFFFF;
-  --background-alt: #F8FBFC;    /* Soft blue-grey for sections */
-  
+  --background-alt: #F8FBFC;
+  /* Soft blue-grey for sections */
+
   --surface: #FFFFFF;
   --surface-dim: #F3F3F4;
   --surface-card: #FFFFFF;
-  
-  --text-main: #1A1C1C;        /* Deep grey for typography readability */
-  --text-muted: #3D494B;       /* Secondary grey */
-  --border-color: #E2E2E2;     /* Muted border outlines */
+
+  --text-main: #1A1C1C;
+  /* Deep grey for typography readability */
+  --text-muted: #3D494B;
+  /* Secondary grey */
+  --border-color: #E2E2E2;
+  /* Muted border outlines */
   --outline-variant: #BCC9CB;
-  
-  --error: #BA1A1A;            /* Clinical Red */
+
+  --error: #BA1A1A;
+  /* Clinical Red */
   --error-bg: #FFDAD6;
-  --success: #006874;          /* Safe Clinical Green-Teal */
+  --success: #006874;
+  /* Safe Clinical Green-Teal */
   --success-bg: #E0F2F4;
-  
+
   /* Fonts */
   --font-body: 'Inter', sans-serif;
   --font-heading: 'Manrope', sans-serif;
-  
+
   /* Spacing (8px linear scale) */
   --space-xs: 4px;
   --space-sm: 12px;
@@ -46,20 +55,21 @@
   --space-lg: 48px;
   --space-xl: 80px;
   --container-max: 1200px;
-  
+
   /* Radii */
   --radius-sm: 4px;
-  --radius-btn: 10px;          /* Specific button radius from DESIGN.md */
+  --radius-btn: 10px;
+  /* Specific button radius from DESIGN.md */
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-full: 9999px;
-  
+
   /* Shadows */
   --shadow-sm: 0px 4px 20px rgba(0, 73, 90, 0.05);
   --shadow-md: 0px 12px 32px rgba(0, 73, 90, 0.08);
   --shadow-lg: 0px 16px 40px rgba(0, 73, 90, 0.12);
-  
+
   /* Animations */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
@@ -84,7 +94,8 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  padding-top: 80px; /* Offset for sticky header */
+  padding-top: 80px;
+  /* Offset for sticky header */
   overflow-x: hidden;
 }
 
@@ -93,7 +104,10 @@ img {
   display: block;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -339,7 +353,8 @@ nav.nav-desktop a.active::after {
   gap: var(--space-sm);
 }
 
-.menu-toggle, .btn-calendar-mobile {
+.menu-toggle,
+.btn-calendar-mobile {
   background: none;
   border: none;
   color: var(--secondary);
@@ -360,7 +375,8 @@ nav.nav-desktop a.active::after {
   height: 40px;
 }
 
-.menu-toggle:hover, .btn-calendar-mobile:hover {
+.menu-toggle:hover,
+.btn-calendar-mobile:hover {
   opacity: 0.9;
 }
 
@@ -411,27 +427,22 @@ nav.nav-desktop a.active::after {
 /* --- Hero Section --- */
 #hero-section {
   position: relative;
-  background-image: url('assets/images/background.webp');
+  background-image: linear-gradient(rgba(0, 73, 90, 0.85), rgba(0, 73, 90, 0.85)), url('assets/images/background_2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
-#hero-section > .container {
+#hero-section>.container {
   position: relative;
   z-index: 2;
 }
 
 .gradient-edge-bottom.color {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: linear-gradient(0deg, rgba(var(--primary-color-rgb), 1) 0%, rgba(var(--primary-color-rgb), 0) 100%);
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 .hero-content {
@@ -455,18 +466,36 @@ nav.nav-desktop a.active::after {
   gap: 6px;
 }
 
+#hero-section .badge-verified {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
 .badge-verified .material-symbols-outlined {
   font-size: 16px;
   color: var(--primary);
+}
+
+#hero-section .badge-verified .material-symbols-outlined {
+  color: #FFFFFF;
 }
 
 .hero-title {
   color: var(--secondary);
 }
 
+#hero-section .hero-title {
+  color: #FFFFFF;
+}
+
 .hero-subtitle {
   color: var(--text-muted);
   max-width: 500px;
+}
+
+#hero-section .hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-checklist {
@@ -484,9 +513,17 @@ nav.nav-desktop a.active::after {
   color: var(--text-muted);
 }
 
+#hero-section .hero-checklist li {
+  color: rgba(255, 255, 255, 0.95);
+}
+
 .hero-checklist li .material-symbols-outlined {
   color: var(--primary);
   font-size: 20px;
+}
+
+#hero-section .hero-checklist li .material-symbols-outlined {
+  color: var(--primary);
 }
 
 /* --- Floating Consultation Form --- */
@@ -536,7 +573,8 @@ nav.nav-desktop a.active::after {
   color: var(--text-muted);
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   border-radius: var(--radius-md);
   border: 1.5px solid var(--border-color);
@@ -546,23 +584,27 @@ nav.nav-desktop a.active::after {
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 4px rgba(0, 160, 177, 0.1);
 }
 
-.form-group input::placeholder, .form-group textarea::placeholder {
+.form-group input::placeholder,
+.form-group textarea::placeholder {
   color: #A0ABAE;
 }
 
 /* Error State */
-.form-group.has-error input, .form-group.has-error textarea {
+.form-group.has-error input,
+.form-group.has-error textarea {
   border-color: var(--error);
   background-color: rgba(186, 26, 26, 0.02);
 }
 
-.form-group.has-error input:focus, .form-group.has-error textarea:focus {
+.form-group.has-error input:focus,
+.form-group.has-error textarea:focus {
   box-shadow: 0 0 0 4px rgba(186, 26, 26, 0.1);
 }
 
@@ -788,7 +830,7 @@ nav.nav-desktop a.active::after {
   position: absolute;
   top: 10px;
   bottom: 10px;
-  left: 28px;
+  left: 29px;
   width: 2px;
   background-color: var(--outline-variant);
 }
@@ -803,8 +845,8 @@ nav.nav-desktop a.active::after {
   width: 36px;
   height: 36px;
   border-radius: var(--radius-full);
-  background-color: var(--secondary-container);
-  color: var(--on-secondary-container);
+  background-color: var(--success-bg);
+  color: var(--secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -853,7 +895,8 @@ nav.nav-desktop a.active::after {
 }
 
 .stars {
-  color: #FFB703; /* Gold color */
+  color: #FFB703;
+  /* Gold color */
   display: flex;
   gap: 2px;
 }
@@ -970,7 +1013,8 @@ nav.nav-desktop a.active::after {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 200px; /* Generous height limit for text transition */
+  max-height: 200px;
+  /* Generous height limit for text transition */
   opacity: 1;
   padding: 0 var(--space-md) var(--space-md) var(--space-md);
   border-top: 1px solid rgba(0, 160, 177, 0.05);
@@ -1146,9 +1190,10 @@ nav.nav-desktop a.active::after {
 /* --- Footer --- */
 footer.site-footer {
   background-color: var(--footer-bg);
-  color: #B5EBFF; /* Secondary Fixed color */
-  padding-top: 40px;
-  padding-bottom: 32px;
+  color: #B5EBFF;
+  /* Secondary Fixed color */
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -1165,7 +1210,7 @@ footer.site-footer {
   gap: 20px;
 }
 
-.footer-grid > .footer-col:first-child {
+.footer-grid>.footer-col:first-child {
   max-width: 480px;
 }
 
@@ -1180,6 +1225,10 @@ footer.site-footer {
   font-size: 15px;
   line-height: 1.6;
   opacity: 0.8;
+}
+
+.footer-desc-mobile {
+  display: none;
 }
 
 .copyright {
@@ -1228,6 +1277,17 @@ footer.site-footer {
   margin-top: 2px;
 }
 
+.footer-contact-list a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-list a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
 .footer-hours-list {
   list-style: none;
   display: flex;
@@ -1245,7 +1305,8 @@ footer.site-footer {
 }
 
 .footer-hours-list li.highlight {
-  color: #5FD7E8; /* Light primary cyan color for highlighted elements */
+  color: #5FD7E8;
+  /* Light primary cyan color for highlighted elements */
 }
 
 .footer-bottom {
@@ -1263,65 +1324,110 @@ footer.site-footer {
   header.sticky-header {
     height: 70px;
   }
-  
+
   body {
     padding-top: 70px;
   }
-  
+
   .header-container {
     padding-left: 16px;
     padding-right: 16px;
   }
-  
+
   .logo img {
     height: 32px;
   }
-  
+
   header.sticky-header .btn {
     padding: 8px 14px;
     font-size: 13px;
   }
-  
+
   .container {
     padding-left: 16px;
     padding-right: 16px;
   }
-  
+
+  .section-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+  }
+
   .lead-form {
     gap: 20px;
   }
-  
+
   .form-row {
     gap: 20px;
   }
-  
+
   .gastro-services-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 8px;
   }
-  
+
   .gastro-service-card {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px;
-    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
   }
-  
+
+  .gastro-service-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+  }
+
+  .gastro-service-icon .material-symbols-outlined {
+    font-size: 20px;
+  }
+
   .gastro-service-text h3 {
-    font-size: 15px;
-  }
-  
-  .gastro-service-text p {
     font-size: 13px;
-    line-height: 1.4;
+    line-height: 1.3;
+  }
+
+  .gastro-service-text p {
+    display: none;
   }
 
   .text-headline-xl {
-    font-size: 30px; /* Prevent overflow of long words like Gastroenterology */
+    font-size: 30px;
+    /* Prevent overflow of long words like Gastroenterology */
   }
 
   .text-headline-lg {
     font-size: 26px;
+  }
+
+  .footer-desc-desktop {
+    display: none;
+  }
+
+  .footer-desc-mobile {
+    display: block;
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.8;
+  }
+
+  footer.site-footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .footer-grid {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .footer-col {
+    gap: 12px;
   }
 }
 
@@ -1334,50 +1440,81 @@ footer.site-footer {
 
 /* Breakpoint: >768px */
 @media (min-width: 768px) {
+
   /* Layout */
   .grid-2 {
     grid-template-columns: 1fr 1fr;
   }
-  
+
+  /* Keep image on left and text + stats stacked on right for desktop */
+  #why-choose-us .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 80px;
+  }
+
+  #why-choose-us .why-choose-image-wrapper {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: start;
+    height: 440px;
+    margin-top: 85px;
+  }
+
+  #why-choose-us .why-choose-content {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    margin-bottom: 24px;
+  }
+
+  #why-choose-us .stats-grid {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    margin-top: 0;
+  }
+
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .footer-grid {
     grid-template-columns: auto auto;
     justify-content: space-between;
   }
-  
+
   .gastro-services-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .procedures-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .procedure-image-wrapper {
     height: 300px;
   }
-  
+
   /* Timeline display change */
   .timeline-wrapper {
     padding-left: 20px;
   }
-  
+
   .timeline-wrapper::before {
-    left: 38px;
+    left: 39px;
   }
-  
+
   .timeline-number {
     width: 40px;
     height: 40px;
   }
-  
+
   .why-choose-image-wrapper {
     height: 350px;
   }
@@ -1385,35 +1522,36 @@ footer.site-footer {
 
 /* Breakpoint: >992px */
 @media (min-width: 992px) {
+
   /* Header */
   nav.nav-desktop {
     display: flex;
     align-items: center;
     gap: var(--space-md);
   }
-  
+
   .menu-toggle {
     display: none;
   }
-  
+
   .btn-calendar-mobile {
     display: none;
   }
-  
+
   /* Grids & Cards */
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .testimonials-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .footer-grid {
     grid-template-columns: auto auto;
     justify-content: space-between;
   }
-  
+
   /* Why Choose split layout */
   .why-choose-section {
     display: grid;
@@ -1421,11 +1559,11 @@ footer.site-footer {
     gap: var(--space-xl);
     align-items: center;
   }
-  
+
   .why-choose-image-wrapper {
     height: 400px;
   }
-  
+
   /* Timeline change: Horizontal on Desktop */
   .timeline-wrapper {
     display: grid;
@@ -1434,7 +1572,7 @@ footer.site-footer {
     padding-left: 0;
     margin-top: 40px;
   }
-  
+
   .timeline-wrapper::before {
     top: 20px;
     left: 20px;
@@ -1443,14 +1581,14 @@ footer.site-footer {
     width: auto;
     height: 2px;
   }
-  
+
   .timeline-step {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 16px;
   }
-  
+
   .timeline-details {
     padding: 0;
   }
@@ -1460,5 +1598,255 @@ footer.site-footer {
 @media (min-width: 1200px) {
   .grid-2 {
     gap: 80px;
+  }
+}
+
+/* --- Floating WhatsApp Button --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background-color: #20BA5A;
+}
+
+.whatsapp-float:active {
+  transform: scale(0.95);
+}
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+/* --- Mobile Bottom Action Bar (Fixed) & Floating Button Responsiveness --- */
+.mobile-bottom-actions {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .whatsapp-float {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 60px !important;
+  }
+
+  .mobile-bottom-actions {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    border-top: 1px solid var(--border-color);
+    z-index: 999;
+  }
+
+  .mobile-bottom-actions .action-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    gap: 4px;
+    text-decoration: none;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .mobile-bottom-actions .action-btn:active {
+    background-color: var(--background-alt);
+  }
+
+  /* Vertical separators between action buttons */
+  .mobile-bottom-actions .action-btn:not(:last-child) {
+    border-right: 1px solid var(--border-color);
+  }
+
+  /* Premium Icon Colors matching brand guidelines */
+  .mobile-bottom-actions .whatsapp-btn .action-icon {
+    fill: #25D366;
+  }
+
+  .mobile-bottom-actions .call-btn .action-icon {
+    color: var(--primary);
+  }
+
+  .mobile-bottom-actions .enquiry-btn .action-icon {
+    color: var(--secondary);
+  }
+
+  .mobile-bottom-actions .action-icon {
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-bottom-actions .svg-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* --- Popular Searches Tags Section --- */
+#popular-searches {
+  border-top: 1px solid var(--border-color);
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-tag {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.search-tag:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+  transform: translateY(-1.5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-tag:active {
+  transform: translateY(0);
+}
+
+.tag-desktop {
+  display: inline;
+}
+
+.tag-mobile {
+  display: none;
+}
+
+/* Mobile responsive padding and alignment */
+@media (max-width: 767px) {
+  .tag-desktop {
+    display: none;
+  }
+
+  .tag-mobile {
+    display: inline;
+  }
+
+  .tags-container {
+    gap: 6px;
+  }
+
+  .tags-row {
+    gap: 4px;
+    padding: 0 4px;
+  }
+
+  .search-tag {
+    padding: 4px 8px;
+    font-size: 10.5px;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  #hero-section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  #hero-section .grid-2 {
+    gap: 24px;
+  }
+}
+
+/* Reorder Why Choose Us section on mobile to show text above image, and stats below image */
+@media (max-width: 767px) {
+  #why-choose-us .grid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  #why-choose-us .why-choose-content {
+    order: 1;
+  }
+
+  #why-choose-us .why-choose-image-wrapper {
+    order: 2;
+    height: 200px;
+  }
+
+  #why-choose-us .stats-grid {
+    order: 3;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  #why-choose-us .stat-card {
+    padding: 12px 8px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  #why-choose-us .stat-number {
+    font-size: 22px;
+  }
+
+  #why-choose-us .stat-label {
+    font-size: 9px;
+    margin-top: 4px;
+    line-height: 1.2;
   }
 }
