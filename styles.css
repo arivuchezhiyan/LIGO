@@ -596,6 +596,35 @@ nav.nav-desktop a.active::after {
   color: #A0ABAE;
 }
 
+/* Custom styling for date inputs to support placeholder text while keeping native indicator icon */
+.form-group input[type="date"] {
+  position: relative;
+}
+
+.form-group input[type="date"]::before {
+  content: attr(placeholder);
+  color: #A0ABAE;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.form-group input[type="date"]:focus::before,
+.form-group input[type="date"]:valid::before {
+  display: none;
+}
+
+.form-group input[type="date"]:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.form-group input[type="date"]:focus::-webkit-datetime-edit,
+.form-group input[type="date"]:valid::-webkit-datetime-edit {
+  color: inherit;
+}
+
 /* Error State */
 .form-group.has-error input,
 .form-group.has-error textarea {
@@ -1801,12 +1830,20 @@ footer.site-footer {
   }
 
   #hero-section {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   #hero-section .grid-2 {
-    gap: 24px;
+    gap: 16px;
+  }
+
+  #hero-section .hero-content {
+    gap: 12px;
+  }
+
+  #hero-section .hero-checklist {
+    gap: 8px;
   }
 }
 
