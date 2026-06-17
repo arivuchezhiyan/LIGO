@@ -186,11 +186,11 @@ function initFormValidation() {
 
     if (isFormValid) {
       // Configure your deployed Google Apps Script Web App URL here
-      const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyoRXErGUmdixydFJeetQ4pYcB9bK3LHHEEE2JbSY1n7DMc-jYxI2Hr6dZOuncT6iyO-Q/exec';
+      const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxByNmjtm3xztpktZ3DarmXtRFB16q-lUC27bj7nwhij9uJ7q_JuniF702HKq05xifPCw/exec';
 
       // Configure email recipients here (without redeploying the Apps Script)
       const EMAIL_TO = 'techsupport@kay.org.in';
-      const EMAIL_CC = ''; // Add CC emails here if needed (e.g. 'divya@kay.org.in, noor.mohamed@kay.org.in, swetha.m@kaymultimedia.in')
+      const EMAIL_CC = 'divya@kay.org.in, noor.mohamed@kay.org.in,gayathri@kay.org.in'; // Add CC emails here if needed (e.g. 'divya@kay.org.in, noor.mohamed@kay.org.in, swetha.m@kaymultimedia.in')
 
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn ? submitBtn.textContent : "Request Appointment";

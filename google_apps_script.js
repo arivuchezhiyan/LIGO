@@ -58,7 +58,7 @@ function doPost(e) {
 
     var emailConfig = {
       to: TO_EMAIL,
-      subject: "New Patient Enquiry: " + fullName + " - " + preferredDate,
+      subject: "LIGO Hospital Gastroenterology Page - New Consultation Enquiry: " + fullName + " - " + preferredDate,
       htmlBody: emailBody,
       name: "LIGO Hospital Chennai"
     };
